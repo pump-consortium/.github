@@ -15,8 +15,9 @@ For now, the scores computed for PUMP livers and the code that produces them:
 | NMP Performance Index | A single 0 to 1 score of how a donor liver behaved on the pump, from 20 on-pump features in five domains; versioned, outcome-free scoring rule | NMP time series and perfusion summary |
 | L-GrAFT7 | Liver Graft Assessment Following Transplantation, 7-day version: a log-odds of early graft failure from daily AST, INR, bilirubin and platelets over post-operative days 1 to 7 (authors' formula) | Post-operative labs |
 | MEAF | Model for Early Allograft Function: a 0 to 10 severity score from peak ALT and INR over days 0 to 3 and bilirubin on day 3 | Post-operative labs |
+| EASE | Early Allograft failure Simplified Estimation: a log-odds of 90-day early allograft failure from MELD at transplant, red cells transfused, early vessel thrombosis, centre volume and the day 1 to 10 kinetics of AST, platelets and bilirubin | Post-operative labs and recipient record |
 
-Each score's repository holds the computation, the validation experiments and the frozen definitions needed to reproduce it. Per-case registry data, feature tables and per-liver score files are **not** stored in these repositories; they live on the governed data share and are available to entitled members through the registry's data steward.
+The [`scores`](https://github.com/pump-consortium/scores) repository holds the per-liver score workbooks for both centres, one workbook per score, each with a README sheet giving the formula, the conventions and the counts, and every input value the score was built from. The computation, the validation experiments and the frozen definitions live with the code. Raw registry exports and feature tables are **not** stored in these repositories; they live on the governed data share and are available to entitled members through the registry's data steward. The score workbooks are de-identified (PUMP IDs only) and are for members of this organisation; do not copy them outside it.
 
 ## Member institutions
 
