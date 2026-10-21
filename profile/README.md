@@ -8,14 +8,15 @@
 
 ## What lives here
 
-Code, documentation and frozen model definitions produced by PUMP members. Per-case registry data, feature tables and per-liver scores are **not** stored in these repositories; they live on the governed data share and are available to entitled members through the registry's data steward.
+For now, the scores computed for PUMP livers and the code that produces them:
 
-| Repository | What it holds |
-| --- | --- |
-| `nmp-performance-index` | The NMP Performance Index: feature pipeline, scoring rule (versioned anchors and domain weights), validation experiments, figures |
-| `pump-qc-pipeline` | Quality-control rules for registry entries, shared by the QC web app |
-| `pump-qc-webapp` | The registry QC web application |
-| `pump-data-dictionary` | The PUMP variable schema and cross-centre mapping specifications |
+| Score | What it is | Computed from |
+| --- | --- | --- |
+| NMP Performance Index | A single 0 to 1 score of how a donor liver behaved on the pump, from 20 on-pump features in five domains; versioned, outcome-free scoring rule | NMP time series and perfusion summary |
+| L-GrAFT7 | Liver Graft Assessment Following Transplantation, 7-day version: a log-odds of early graft failure from daily AST, INR, bilirubin and platelets over post-operative days 1 to 7 (authors' formula) | Post-operative labs |
+| MEAF | Model for Early Allograft Function: a 0 to 10 severity score from peak ALT and INR over days 0 to 3 and bilirubin on day 3 | Post-operative labs |
+
+Each score's repository holds the computation, the validation experiments and the frozen definitions needed to reproduce it. Per-case registry data, feature tables and per-liver score files are **not** stored in these repositories; they live on the governed data share and are available to entitled members through the registry's data steward.
 
 ## Member institutions
 
